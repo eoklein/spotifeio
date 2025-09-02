@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, inject, OnInit} from "@angular/core";
+import {ChangeDetectionStrategy, Component, inject, input, OnInit} from "@angular/core";
 import {SpotifyService} from "../../services/spotify.service";
 
 @Component({
@@ -10,6 +10,8 @@ import {SpotifyService} from "../../services/spotify.service";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BotaoMenuComponent implements OnInit {
+
+  nome = input.required<string>();
 
   ngOnInit(): void {
 
